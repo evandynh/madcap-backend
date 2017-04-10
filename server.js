@@ -9,7 +9,11 @@ var express      = require('express'),
 
 require('dotenv').config()
 
-mongoose.connect('mongodb://localhost/madcap');
+// =========================================================================
+// ========== MONGOOSE CONNECTION ==========================================
+// =========================================================================
+var dbUri = process.env.MONGODB_URI || 'mongodb://localhost/madcap'
+mongoose.connect(dbUri)
 
 // =========================================================================
 // ========== MIDDLEWARE ===================================================
