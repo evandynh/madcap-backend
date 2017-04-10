@@ -1,4 +1,4 @@
-var Picture = require('../models/Picture')
+var Picture = require('../models/picture')
 
 function indexPicture(req, res){
   Picture.find({}, function(err, pictures){

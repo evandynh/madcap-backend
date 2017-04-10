@@ -5,10 +5,7 @@ var userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   name:  { type: String, required: true },
   points: Number,
-  pictures: [{
-    type: mongoose.Schema.ObjectId,
-    ref: 'Picture'
-  }]
+  pictures: [{type: mongoose.Schema.ObjectId, ref: 'Picture'}]
 });
 
 // add bcrypt hashing to model (works on a password field)!

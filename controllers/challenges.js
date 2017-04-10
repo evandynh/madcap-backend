@@ -1,4 +1,4 @@
-var Challenge = require('../models/Challenge')
+var Challenge = require('../models/challenge')
 
 function indexChallenge(req, res){
   Challenge.find({}, function(err, challenges){
