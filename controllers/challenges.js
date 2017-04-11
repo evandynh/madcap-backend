@@ -22,6 +22,8 @@ function updateChallenge(req, res){
     if(err) throw err
 
     if(req.body.title) challenge.title = req.body.title
+    if(req.body.description) challenge.description = req.body.description
+    if(req.body.url) challenge.url = req.body.url
     if(req.body.points) challenge.points = req.body.points
 
     challenge.save(function(err){
