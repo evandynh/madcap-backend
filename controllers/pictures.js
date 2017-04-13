@@ -22,6 +22,7 @@ function updatePicture(req, res){
     if(err) throw err
 
     if(req.body.description) picture.description = req.body.description
+    if(req.body.likes) picture.likes = req.body.likes
 
     picture.save(function(err){
       if(err) throw err
